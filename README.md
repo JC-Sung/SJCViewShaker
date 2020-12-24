@@ -14,6 +14,7 @@ shaker views AFViewShaker的UIView分类的实现，使用更便捷
 
 [@[view1, view2, ...] sjc_shake];
 
+```
 
 ## 简介
 ## 效果图：https://cdn.yehwang.com/image/return_apply/20201224/c90cec907b028ad4f9626d55d1741bff.jpg
