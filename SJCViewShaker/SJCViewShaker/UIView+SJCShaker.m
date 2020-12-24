@@ -7,7 +7,7 @@
 //
 
 #import "UIView+SJCShaker.h"
-#include <objc/runtime.h>
+#import <objc/runtime.h>
 
 static NSString * const kSJCViewShakerAnimationKey = @"kSJCViewShakerAnimationKey";
 static const NSString * kSJCViewShakerCompletionKey        = @"kSJCViewShakerCompletionKey";
