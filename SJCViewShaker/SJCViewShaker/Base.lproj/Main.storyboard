@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKr-9t-5Sh">
+                                <rect key="frame" x="157" y="127" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="skN-DW-adB"/>
+                                    <constraint firstAttribute="height" constant="21" id="ulW-0O-gSp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMV-Qk-YuP">
+                                <rect key="frame" x="182.5" y="214" width="51" height="31"/>
+                            </switch>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjk-F2-bcD">
+                                <rect key="frame" x="180.5" y="285" width="53" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOB-BG-gli">
+                                <rect key="frame" x="163" y="457" width="88" height="30"/>
+                                <state key="normal" title="shake a view"/>
+                                <connections>
+                                    <action selector="shake:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RhR-Ve-NcT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hw8-2c-sBa">
+                                <rect key="frame" x="136.5" y="563" width="141" height="30"/>
+                                <state key="normal" title="shake multiple views"/>
+                                <connections>
+                                    <action selector="shakes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NmY-5h-tPL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BKr-9t-5Sh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="6Xn-SJ-nyZ"/>
+                            <constraint firstItem="zjk-F2-bcD" firstAttribute="top" secondItem="DMV-Qk-YuP" secondAttribute="bottom" constant="40" id="7eO-It-t3J"/>
+                            <constraint firstItem="DMV-Qk-YuP" firstAttribute="centerX" secondItem="BKr-9t-5Sh" secondAttribute="centerX" id="UsP-mj-XFp"/>
+                            <constraint firstItem="zjk-F2-bcD" firstAttribute="centerX" secondItem="BKr-9t-5Sh" secondAttribute="centerX" id="V4X-Wo-AhZ"/>
+                            <constraint firstItem="DMV-Qk-YuP" firstAttribute="top" secondItem="BKr-9t-5Sh" secondAttribute="bottom" constant="66" id="Wja-z0-qoy"/>
+                            <constraint firstItem="BKr-9t-5Sh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="daB-ks-xvV"/>
+                            <constraint firstItem="hw8-2c-sBa" firstAttribute="top" secondItem="WOB-BG-gli" secondAttribute="bottom" constant="76" id="fLu-zt-ZPB"/>
+                            <constraint firstItem="WOB-BG-gli" firstAttribute="top" secondItem="zjk-F2-bcD" secondAttribute="bottom" constant="138" id="izm-P1-aAX"/>
+                            <constraint firstItem="WOB-BG-gli" firstAttribute="centerX" secondItem="BKr-9t-5Sh" secondAttribute="centerX" id="lbz-Hl-Sie"/>
+                            <constraint firstItem="hw8-2c-sBa" firstAttribute="centerX" secondItem="BKr-9t-5Sh" secondAttribute="centerX" id="sgC-bX-LEL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="zjk-F2-bcD" id="myh-Ph-b3L"/>
+                        <outlet property="lab" destination="BKr-9t-5Sh" id="vna-Vn-KV9"/>
+                        <outlet property="slide" destination="DMV-Qk-YuP" id="O6A-aa-7QE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
